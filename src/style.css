@@ -1,0 +1,28 @@
+:root {
+  /* color de textos */
+  --color-primary: #f1f5f9;
+  --color-secondary: #4c63e8;
+  --color-third: #92a1b6;
+
+  --background: #0a0f1d;
+  --card-color-border: #171b2a;
+  --card-radius-border: 6px;
+  --box-shadow-secondary: 0 4px 14px rgba(76, 99, 232, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var(--background);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
