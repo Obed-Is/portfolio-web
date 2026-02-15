@@ -4,7 +4,7 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 </script>
 
 <template>
-  <div class="container">
+  <div  id="inicio"  class="container">
     <NavbarComponent />
     <HeroComponent />
   </div>
@@ -13,9 +13,10 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 <style scoped>
 .container {
   width: 100%;
-  height: 100dvh;
-  display: grid;
-  place-items: center;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 </style>

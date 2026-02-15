@@ -3,7 +3,7 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
 
 </script>
 <template>
-    <section id="first" class="first-section">
+    <section class="first-section">
         <div class="info-section">
             <p class="txt-name">
                 <span class="txt-var">{</span> Hola soy, Obed Aquino <span class="txt-var">}</span>
@@ -31,10 +31,10 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
 <style scoped>
 .first-section {
     width: 90%;
-    min-height: 400px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
+    margin-top: 80px;
     padding: 26px 52px;
     background: linear-gradient(180deg, rgba(12, 15, 33, 1) 8%, rgba(20, 27, 72, 1) 86%);
     border: 1px solid var(--card-color-border);
@@ -161,6 +161,7 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
 
 @media (max-width: 820px) {
     .first-section {
+        margin-top: 80px;
         display: flex;
         flex-direction: column;
         justify-content: center;
