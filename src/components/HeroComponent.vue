@@ -8,9 +8,10 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
             <p class="txt-name">
                 <span class="txt-var">{</span> Hola soy, Obed Aquino <span class="txt-var">}</span>
             </p>
-            <h1>Desarrollador
+            <h1>
+                Desarrollador
                 <span class="letter-tag">
-                    < Full Stack Jr />
+                    &lt; Full Stack Jr /&gt;
                 </span>
             </h1>
             <p class="txt-info">
@@ -20,7 +21,7 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
             <a href="#contacto" class="btn btn-primary">Contacto</a>
             <a href="/CV_Obed_Aquino_Desarrollador_Full_Stack_Junior.pdf" download="CV_Obed_Aquino.pdf"
                 class="btn btn-secondary">
-                Descarcar CV
+                Descargar CV
             </a>
         </div>
         <div class="perfil-section">
