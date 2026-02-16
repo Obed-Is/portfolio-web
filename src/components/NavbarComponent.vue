@@ -40,6 +40,7 @@ nav {
     top: 20px;
     padding: 7px 20px;
     border-radius: var(--card-radius-border);
+    z-index: 10;
 
     ul {
         display: flex;

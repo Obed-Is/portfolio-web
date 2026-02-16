@@ -17,7 +17,7 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
                 Ayudo a transformar ideas en aplicaciones web funcionales.
                 Disfruto construir la lógica detrás de sistemas web, APIs y bases de datos.
             </p>
-            <a class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-primary">Contacto</a>
             <a href="/CV_Obed_Aquino_Desarrollador_Full_Stack_Junior.pdf" download="CV_Obed_Aquino.pdf"
                 class="btn btn-secondary">
                 Descarcar CV

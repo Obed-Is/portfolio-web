@@ -1,12 +1,14 @@
 <script setup>
 import HeroComponent from "./components/HeroComponent.vue";
 import NavbarComponent from "./components/NavbarComponent.vue";
+import ProyectsComponent from "./components/ProyectsComponent.vue";
 </script>
 
 <template>
   <div  id="inicio"  class="container">
     <NavbarComponent />
     <HeroComponent />
+    <ProyectsComponent />
   </div>
 </template>
 
