@@ -1,8 +1,4 @@
 <script setup>
-import { ref } from 'vue';
-
-const activeLink = ref('inicio');
-
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     if (scrollY >= 50) {
@@ -14,22 +10,19 @@ window.addEventListener('scroll', () => {
 
 </script>
 <template>
-    <nav class="activo">
+    <nav>
         <ul>
             <li>
-                <a href="#inicio" :class="{ active: activeLink == 'inicio' }" @click="activeLink = 'inicio'">Inicio</a>
+                <a href="#inicio">Inicio</a>
             </li>
             <li>
-                <a href="#proyectos" :class="{ active: activeLink == 'proyectos' }"
-                    @click="activeLink = 'proyectos'">Proyectos</a>
+                <a href="#proyectos">Proyectos</a>
             </li>
             <li>
-                <a href="#tecnologias" :class="{ active: activeLink == 'tecnologias' }"
-                    @click="activeLink = 'tecnologias'">Tecnologias</a>
+                <a href="#tecnologias">Tecnologias</a>
             </li>
             <li>
-                <a href="#contacto" :class="{ active: activeLink == 'contacto' }"
-                    @click="activeLink = 'contacto'">Contacto</a>
+                <a href="#contacto">Contacto</a>
             </li>
         </ul>
     </nav>
@@ -61,10 +54,6 @@ a {
 }
 
 a:hover {
-    color: var(--color-third);
-}
-
-.active {
     color: var(--color-third);
 }
 
