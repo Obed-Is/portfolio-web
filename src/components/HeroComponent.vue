@@ -37,7 +37,7 @@ import fotoPerfil from '@/assets/foto-perfil.webp'
     justify-items: center;
     margin-top: 80px;
     padding: 26px 52px;
-    background: linear-gradient(180deg, rgba(12, 15, 33, 1) 8%, rgba(20, 27, 72, 1) 86%);
+    background: var(--background-gradient);
     border: 1px solid var(--card-color-border);
     border-radius: var(--card-radius-border);
     transition: transform 1s ease, box-shadow 1s ease;

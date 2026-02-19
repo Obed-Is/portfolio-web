@@ -61,9 +61,8 @@ import css from '@/assets/svgTecnologias/css.svg'
             </CardProyectComponent> />
 
             <!-- portafolio(recordar actualizar si se cambia!!!!!) -->
-            <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/portfolio-web'"
-                :fotoProyecto="ftPortafolio" :altProyecto="'Foto del portafolio'" ,
-                :titulo="'Portafolio personal'" :descripcion="`Web personal con el objetivo de demostrar las habilidades
+            <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/portfolio-web'" :fotoProyecto="ftPortafolio"
+                :altProyecto="'Foto del portafolio'" , :titulo="'Portafolio personal'" :descripcion="`Web personal con el objetivo de demostrar las habilidades
                 y conocimientos adquiridos como desarrollador.`">
                 <BadgeCardComponent :urlIcon="vueIcon" :title-badge="'Vue.js'" :alt-icon="'Icono de Vue.js'" />
                 <BadgeCardComponent :urlIcon="nodeIcon" :title-badge="'Node.js'" :alt-icon="'Icono de Node.js'" />

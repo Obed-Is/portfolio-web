@@ -56,7 +56,7 @@ defineProps({
     gap: 18px;
     padding: 12px;
     border-radius: var(--card-radius-border);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.0));
+    background: var(--background-gradient);
     border: 1px solid var(--card-color-border);
     box-shadow: 0 6px 18px rgba(8, 15, 30, 0.06);
     text-decoration: none;

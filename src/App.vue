@@ -2,13 +2,15 @@
 import HeroComponent from "./components/HeroComponent.vue";
 import NavbarComponent from "./components/NavbarComponent.vue";
 import ProyectsComponent from "./components/ProyectsComponent.vue";
+import ContactComponent from "./components/ContactComponent.vue";
 </script>
 
 <template>
-  <div  id="inicio"  class="container">
+  <div id="inicio" class="container">
     <NavbarComponent />
     <HeroComponent />
     <ProyectsComponent />
+    <ContactComponent />
   </div>
 </template>
 

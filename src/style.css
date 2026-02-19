@@ -5,6 +5,7 @@
   --color-third: #92a1b6;
 
   --background: #0a0f1d;
+  --background-gradient: radial-gradient(circle at 70% 80%, #111d2f 0%, #0b1321 100%);
   --card-color-border: #171b2a;
   --card-radius-border: 16px;
   --box-shadow-secondary: 0 4px 14px rgba(76, 99, 232, 0.25);
