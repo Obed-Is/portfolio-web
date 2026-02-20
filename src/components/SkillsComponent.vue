@@ -1,18 +1,18 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-import nodeIcon from '@/assets/svgtecnologias/nodejs.svg';
-import expressIcon from '@/assets/svgtecnologias/expressjs.svg';
-import mysqlIcon from '@/assets/svgtecnologias/mysql-wordmark-dark.svg';
-import jwtIcon from '@/assets/svgtecnologias/jwt.svg';
-import postmanIcon from '@/assets/svgtecnologias/postman.svg';
-import apiRestIcon from '@/assets/svgtecnologias/apirest.svg';
-import gitIcon from '@/assets/svgtecnologias/git.svg';
+import nodeIcon from '@/assets/svgTecnologias/nodejs.svg';
+import expressIcon from '@/assets/svgTecnologias/expressjs.svg';
+import mysqlIcon from '@/assets/svgTecnologias/mysql-wordmark-dark.svg';
+import jwtIcon from '@/assets/svgTecnologias/jwt.svg';
+import postmanIcon from '@/assets/svgTecnologias/postman.svg';
+import apiRestIcon from '@/assets/svgTecnologias/apirest.svg';
+import gitIcon from '@/assets/svgTecnologias/git.svg';
 
-import htmlIcon from '@/assets/svgtecnologias/html5.svg';
-import cssIcon from '@/assets/svgtecnologias/css.svg';
-import jsIcon from '@/assets/svgtecnologias/javascript.svg';
-import vueIcon from '@/assets/svgtecnologias/vue.svg';
+import htmlIcon from '@/assets/svgTecnologias/html5.svg';
+import cssIcon from '@/assets/svgTecnologias/css.svg';
+import jsIcon from '@/assets/svgTecnologias/javascript.svg';
+import vueIcon from '@/assets/svgTecnologias/vue.svg';
 
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
