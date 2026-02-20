@@ -2,6 +2,7 @@
 import HeroComponent from "./components/HeroComponent.vue";
 import NavbarComponent from "./components/NavbarComponent.vue";
 import ProyectsComponent from "./components/ProyectsComponent.vue";
+import SkillsComponent from "./components/SkillsComponent.vue";
 import ContactComponent from "./components/ContactComponent.vue";
 </script>
 
@@ -10,6 +11,7 @@ import ContactComponent from "./components/ContactComponent.vue";
     <NavbarComponent />
     <HeroComponent />
     <ProyectsComponent />
+    <SkillsComponent />
     <ContactComponent />
   </div>
 </template>
