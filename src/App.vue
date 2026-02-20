@@ -4,6 +4,7 @@ import NavbarComponent from "./components/NavbarComponent.vue";
 import ProyectsComponent from "./components/ProyectsComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
 import ContactComponent from "./components/ContactComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import ContactComponent from "./components/ContactComponent.vue";
     <ProyectsComponent />
     <SkillsComponent />
     <ContactComponent />
+    <FooterComponent />
   </div>
 </template>
 

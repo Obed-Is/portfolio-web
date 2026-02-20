@@ -34,7 +34,7 @@ const gmailLink = `https://mail.google.com/mail/?view=cm&to=${emailContact.email
 <style scoped>
 #contacto {
     width: 90%;
-    height: 350px;
+    min-height: 350px;
     margin-top: 80px;
     color: var(--color-primary);
 }
