@@ -20,7 +20,7 @@ onMounted(() => {
             <h1 class="anim-item" style="--i: 1">
                 Desarrollador
                 <span class="letter-tag">
-                    &lt; Full Stack Jr /&gt;
+                    &lt; Backend Jr /&gt;
                 </span>
             </h1>
             <p class="txt-info anim-item" style="--i: 2">

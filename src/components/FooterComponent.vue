@@ -36,6 +36,11 @@ footer {
     background: linear-gradient(90deg, transparent, var(--card-color-border), transparent);
 }
 
+.footer-copy {
+    font-size: 0.9em;
+    color: var(--color-third);
+}
+
 @media (max-width: 600px) {
     footer {
         width: 100%;

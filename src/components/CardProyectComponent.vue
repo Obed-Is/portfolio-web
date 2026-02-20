@@ -29,7 +29,7 @@ defineProps({
     <a :href="urlGitHub" target="_blank" class="card">
         <div class="media">
             <!-- fotoProyecto, altProyecto -->
-            <img :src="fotoProyecto" :alt="altProyecto" />
+            <img :src="fotoProyecto" :alt="altProyecto" loading="lazy" />
         </div>
 
         <div class="info">
