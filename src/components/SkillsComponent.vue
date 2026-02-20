@@ -5,9 +5,9 @@ import nodeIcon from '@/assets/svgtecnologias/nodejs.svg';
 import expressIcon from '@/assets/svgtecnologias/expressjs.svg';
 import mysqlIcon from '@/assets/svgtecnologias/mysql-wordmark-dark.svg';
 import jwtIcon from '@/assets/svgtecnologias/jwt.svg';
-import stripeIcon from '@/assets/svgtecnologias/stripe.svg';
 import postmanIcon from '@/assets/svgtecnologias/postman.svg';
 import apiRestIcon from '@/assets/svgtecnologias/apirest.svg';
+import gitIcon from '@/assets/svgtecnologias/git.svg';
 
 import htmlIcon from '@/assets/svgtecnologias/html5.svg';
 import cssIcon from '@/assets/svgtecnologias/css.svg';
@@ -17,11 +17,11 @@ import vueIcon from '@/assets/svgtecnologias/vue.svg';
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
-    { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },
-    { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
-    { name: 'Stripe', icon: stripeIcon, alt: 'Stripe Logo' },
-    { name: 'Postman', icon: postmanIcon, alt: 'Postman Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
+    { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
+    { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },
+    { name: 'Postman', icon: postmanIcon, alt: 'Postman Logo' },
+    { name: 'Git', icon: gitIcon, alt: 'Git Logo' },
 ];
 
 const frontendSkills = [
@@ -55,10 +55,12 @@ onMounted(() => {
     <section id="habilidades" :class="{ 'animate-in': isVisible }">
         <h2>Habilidades</h2>
 
-        <!-- Backend -->
+        <!-- Backend — principal -->
         <div class="skill-group backend-group">
             <div class="group-header">
+                <span class="group-badge">★</span>
                 <span class="group-label">Backend</span>
+                <span class="group-tag">Enfoque principal</span>
                 <span class="group-line"></span>
             </div>
             <div class="skills-grid skills-grid--backend">
@@ -72,15 +74,16 @@ onMounted(() => {
             </div>
         </div>
 
-        <!-- Frontend -->
+        <!-- Frontend — complementario -->
         <div class="skill-group frontend-group">
             <div class="group-header">
-                <span class="group-label">Frontend</span>
-                <span class="group-line"></span>
+                <span class="group-label group-label--secondary">Frontend</span>
+                <span class="group-tag group-tag--secondary">Complementario</span>
+                <span class="group-line group-line--secondary"></span>
             </div>
             <div class="skills-grid skills-grid--frontend">
                 <div v-for="(tech, i) in frontendSkills" :key="tech.name" class="skill-card skill-card--frontend"
-                    :style="{ '--delay': (i * 0.1 + 0.6) + 's' }">
+                    :style="{ '--delay': (i * 0.1 + 0.7) + 's' }">
                     <div class="icon-wrapper">
                         <img :src="tech.icon" :alt="tech.alt" class="skill-icon" />
                     </div>
@@ -97,7 +100,7 @@ section {
     flex-direction: column;
     width: 90%;
     margin: 60px 0;
-    gap: 40px;
+    gap: 45px;
 }
 
 h2 {
@@ -111,27 +114,73 @@ h2 {
 .skill-group {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
+}
+
+.backend-group {
+    padding: 28px;
+    border-radius: var(--card-radius-border);
+    border: 1px solid rgba(76, 99, 232, 0.2);
+    background: linear-gradient(160deg, rgba(76, 99, 232, 0.06) 0%, transparent 60%);
+    position: relative;
+}
+
+.frontend-group {
+    padding: 0 4px;
+    opacity: 0.85;
 }
 
 .group-header {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
+}
+
+.group-badge {
+    font-size: 1em;
+    color: var(--color-secondary);
+    animation: pulse 2s ease-in-out infinite;
 }
 
 .group-label {
-    font-size: 1.15em;
-    font-weight: 600;
+    font-size: 1.25em;
+    font-weight: 700;
     color: var(--color-secondary);
     white-space: nowrap;
     letter-spacing: 0.5px;
+}
+
+.group-label--secondary {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--color-third);
+}
+
+.group-tag {
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-secondary);
+    background: rgba(76, 99, 232, 0.12);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.group-tag--secondary {
+    color: var(--color-third);
+    background: rgba(146, 161, 182, 0.1);
 }
 
 .group-line {
     flex: 1;
     height: 1px;
     background: linear-gradient(90deg, var(--color-secondary), transparent);
+}
+
+.group-line--secondary {
+    background: linear-gradient(90deg, rgba(146, 161, 182, 0.4), transparent);
 }
 
 .skills-grid {
@@ -170,27 +219,28 @@ section.animate-in .skill-card {
     width: 130px;
     height: 130px;
     padding: 22px;
-    background: linear-gradient(145deg, rgba(76, 99, 232, 0.08), rgba(76, 99, 232, 0.02));
+    background: linear-gradient(145deg, rgba(76, 99, 232, 0.1), rgba(76, 99, 232, 0.02));
     border-color: rgba(76, 99, 232, 0.25);
 }
 
 .skill-card--backend:hover {
-    transform: translateY(-6px) scale(1.04);
-    box-shadow: var(--box-shadow-secondary);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 28px rgba(76, 99, 232, 0.35);
     border-color: var(--color-secondary);
 }
 
 .skill-card--frontend {
-    width: 105px;
-    height: 105px;
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.03);
+    width: 95px;
+    height: 95px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
 }
 
 .skill-card--frontend:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--box-shadow-secondary);
-    border-color: var(--color-secondary);
+    border-color: var(--color-third);
 }
 
 .icon-wrapper {
@@ -209,18 +259,20 @@ section.animate-in .skill-card {
 }
 
 .skill-card--backend:hover .skill-icon {
-    filter: drop-shadow(0 0 10px rgba(76, 99, 232, 0.55));
+    filter: drop-shadow(0 0 12px rgba(76, 99, 232, 0.6));
 }
 
 .skill-card--frontend .skill-icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
-    transition: filter 0.3s ease;
+    opacity: 0.8;
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .skill-card--frontend:hover .skill-icon {
-    filter: drop-shadow(0 0 8px rgba(76, 99, 232, 0.4));
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(146, 161, 182, 0.4));
 }
 
 .skill-name {
@@ -232,6 +284,12 @@ section.animate-in .skill-card {
 
 .skill-card--backend .skill-name {
     font-size: 0.9em;
+    font-weight: 600;
+}
+
+.skill-card--frontend .skill-name {
+    font-size: 0.75em;
+    color: var(--color-third);
 }
 
 @keyframes fadeSlideUp {
@@ -241,11 +299,27 @@ section.animate-in .skill-card {
     }
 }
 
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
 @media (max-width: 768px) {
     section {
         width: 90%;
         margin: 40px 0;
         gap: 30px;
+    }
+
+    .backend-group {
+        padding: 18px;
     }
 
     .skills-grid {
@@ -265,18 +339,23 @@ section.animate-in .skill-card {
     }
 
     .skill-card--frontend {
-        width: 90px;
-        height: 90px;
-        padding: 14px;
+        width: 82px;
+        height: 82px;
+        padding: 12px;
     }
 
     .skill-card--frontend .skill-icon {
-        width: 34px;
-        height: 34px;
+        width: 30px;
+        height: 30px;
     }
 
     .skill-name {
-        font-size: 0.75em;
+        font-size: 0.7em;
+    }
+
+    .group-tag {
+        font-size: 0.6em;
+        padding: 2px 7px;
     }
 }
 </style>
