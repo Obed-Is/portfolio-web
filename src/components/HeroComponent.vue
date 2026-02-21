@@ -20,12 +20,12 @@ onMounted(() => {
             <h1 class="anim-item" style="--i: 1">
                 Desarrollador
                 <span class="letter-tag">
-                    &lt; Backend Jr /&gt;
+                    &lt; Full Stack Jr /&gt;
                 </span>
             </h1>
             <p class="txt-info anim-item" style="--i: 2">
-                Ayudo a transformar ideas en aplicaciones web funcionales.
-                Disfruto construir la lógica detrás de sistemas web, APIs y bases de datos.
+                Desarrollo APIs y aplicaciones web con Node.js y Express. Me enfoco en construir servicios backend
+                seguros, escalables y bien estructurados, trabajando con bases de datos SQL y autenticación con JWT.
             </p>
             <div class="btn-group anim-item" style="--i: 3">
                 <a href="#contacto" class="btn btn-primary">
