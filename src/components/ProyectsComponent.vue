@@ -39,7 +39,7 @@ import css from '@/assets/svgTecnologias/css.svg'
                 <BadgeCardComponent :urlIcon="jsIcon" :title-badge="'Javascript'" :alt-icon="'Icono de Javascript'" />
                 <BadgeCardComponent :urlIcon="postman" :title-badge="'Postman'" :alt-icon="'Icono de Postman'" />
                 <BadgeCardComponent :urlIcon="gitHubIcon" :title-badge="'GitHub'" :alt-icon="'Icono de GitHub'" />
-            </CardProyectComponent> />
+            </CardProyectComponent>
 
             <!-- Pasarela de pago con Api de Stripe -->
             <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/pasarela-pago-con-stripe-nodejs'"
@@ -66,7 +66,7 @@ import css from '@/assets/svgTecnologias/css.svg'
                 <BadgeCardComponent :urlIcon="nodeIcon" :title-badge="'Node.js'" :alt-icon="'Icono de Node.js'" />
                 <BadgeCardComponent :urlIcon="jsIcon" :title-badge="'Javascript'" :alt-icon="'Icono de Javascript'" />
                 <BadgeCardComponent :urlIcon="gitHubIcon" :title-badge="'GitHub'" :alt-icon="'Icono de GitHub'" />
-            </CardProyectComponent> />
+            </CardProyectComponent>
         </div>
     </section>
 </template>
@@ -90,5 +90,11 @@ h2 {
     padding: 5px 10px;
     background-color: var(--color-third);
     border-radius: var(--card-radius-border);
+}
+
+.container-proyects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 </style>
