@@ -8,6 +8,7 @@ import jwtIcon from '@/assets/svgTecnologias/jwt.svg';
 import postmanIcon from '@/assets/svgTecnologias/postman.svg';
 import apiRestIcon from '@/assets/svgTecnologias/apirest.svg';
 import gitIcon from '@/assets/svgTecnologias/git.svg';
+import dockerIcon from '@/assets/svgTecnologias/docker.svg';
 
 import htmlIcon from '@/assets/svgTecnologias/html5.svg';
 import cssIcon from '@/assets/svgTecnologias/css.svg';
@@ -22,6 +23,7 @@ const backendSkills = [
     { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },
     { name: 'Postman', icon: postmanIcon, alt: 'Postman Logo' },
     { name: 'Git', icon: gitIcon, alt: 'Git Logo' },
+    { name: 'Docker', icon: dockerIcon, alt: 'Docker Logo' },
 ];
 
 const frontendSkills = [
