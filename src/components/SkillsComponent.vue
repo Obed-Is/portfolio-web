@@ -9,6 +9,8 @@ import postmanIcon from '@/assets/svgTecnologias/postman.svg';
 import apiRestIcon from '@/assets/svgTecnologias/apirest.svg';
 import gitIcon from '@/assets/svgTecnologias/git.svg';
 import dockerIcon from '@/assets/svgTecnologias/docker.svg';
+import phpIcon from '@/assets/svgTecnologias/php.svg';
+import sqlServerIcon from '@/assets/svgTecnologias/sql-server.svg';
 
 import htmlIcon from '@/assets/svgTecnologias/html5.svg';
 import cssIcon from '@/assets/svgTecnologias/css.svg';
@@ -18,9 +20,11 @@ import vueIcon from '@/assets/svgTecnologias/vue.svg';
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
+    { name: 'PHP', icon: phpIcon, alt: 'PHP Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
     { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
     { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },
+    { name: 'SQL Server', icon: sqlServerIcon, alt: 'SQL Server Logo' },
     { name: 'Postman', icon: postmanIcon, alt: 'Postman Logo' },
     { name: 'Git', icon: gitIcon, alt: 'Git Logo' },
     { name: 'Docker', icon: dockerIcon, alt: 'Docker Logo' },
