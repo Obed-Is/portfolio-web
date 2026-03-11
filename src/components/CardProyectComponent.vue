@@ -20,6 +20,10 @@ defineProps({
         type: String,
         required: true
     },
+    deploy: {
+        type: String,
+        required: false
+    },
 
 })
 </script>
@@ -39,6 +43,9 @@ defineProps({
                 <!-- descripcion -->
                 <p class="txt-info">{{ descripcion }}</p>
             </section>
+
+            <!-- deploy -->
+            <a v-if="deploy" :href="deploy" target="_blank" class="deploy">Abrir proyecto en línea</a>
 
             <!-- tecnologias -->
             <div class="badges">
@@ -117,6 +124,32 @@ h3 {
     gap: 8px;
     flex-wrap: wrap;
 }
+
+.deploy {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deploy:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.08);
+}
+
 
 @media (max-width: 720px) {
     .card {

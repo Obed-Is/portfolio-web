@@ -4,6 +4,7 @@ import CardProyectComponent from './CardProyectComponent.vue';
 import ftInventario from '@/assets/sistema-inventario.webp';
 import ftPasarela from '@/assets/pasarela-stripe.webp';
 import ftPortafolio from '@/assets/portafolio-web.webp';
+import ftAutenticacion from '@/assets/auth-node.webp';
 
 import BadgeCardComponent from './BadgeCardComponent.vue';
 import nodeIcon from '@/assets/svgTecnologias/nodejs.svg'
@@ -52,6 +53,24 @@ import css from '@/assets/svgTecnologias/css.svg'
                     :alt-icon="'Icono de Express.js'" />
                 <BadgeCardComponent :urlIcon="jsIcon" :title-badge="'Javascript'" :alt-icon="'Icono de Javascript'" />
                 <BadgeCardComponent :urlIcon="stripe" :title-badge="'Stripe'" :alt-icon="'Icono de Stripe'" />
+                <BadgeCardComponent :urlIcon="gitHubIcon" :title-badge="'GitHub'" :alt-icon="'Icono de GitHub'" />
+                <BadgeCardComponent :urlIcon="html5" :title-badge="'HTML'" :alt-icon="'Icono de html'" />
+                <BadgeCardComponent :urlIcon="css" :title-badge="'CSS'" :alt-icon="'Icono de css'" />
+
+            </CardProyectComponent>
+
+            <!-- autenticacion con jwt -->
+            <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/autenticacion-con-jwt-nodejs'"
+                :fotoProyecto="ftAutenticacion" :altProyecto="'Foto de la autenticacion con jwt'"
+                :titulo="'Autenticacion con jwt'"
+                :descripcion="`Implementacion de autenticacion con jwt en nodejs manejando tokens de forma segura.`"
+                :deploy="'https://auth-jwt-nodejs.onrender.com/home'">
+
+                <BadgeCardComponent :urlIcon="nodeIcon" :title-badge="'Node.js'" :alt-icon="'Icono de Node.js'" />
+                <BadgeCardComponent :urlIcon="expressIcon" :title-badge="'Express.js'"
+                    :alt-icon="'Icono de Express.js'" />
+                <BadgeCardComponent :urlIcon="jsIcon" :title-badge="'Javascript'" :alt-icon="'Icono de Javascript'" />
+                <BadgeCardComponent :urlIcon="jwtIcon" :title-badge="'JWT'" :alt-icon="'Icono de JWT'" />
                 <BadgeCardComponent :urlIcon="gitHubIcon" :title-badge="'GitHub'" :alt-icon="'Icono de GitHub'" />
                 <BadgeCardComponent :urlIcon="html5" :title-badge="'HTML'" :alt-icon="'Icono de html'" />
                 <BadgeCardComponent :urlIcon="css" :title-badge="'CSS'" :alt-icon="'Icono de css'" />
