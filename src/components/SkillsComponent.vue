@@ -20,7 +20,7 @@ import vueIcon from '@/assets/svgTecnologias/vue.svg';
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
-    { name: 'PHP', icon: phpIcon, alt: 'PHP Logo' },
+    // { name: 'PHP', icon: phpIcon, alt: 'PHP Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
     { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
     { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },

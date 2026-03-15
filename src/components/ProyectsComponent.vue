@@ -18,6 +18,7 @@ import stripe from '@/assets/svgTecnologias/stripe.svg'
 import postman from '@/assets/svgTecnologias/postman.svg'
 import html5 from '@/assets/svgTecnologias/html5.svg'
 import css from '@/assets/svgTecnologias/css.svg'
+import sqlserver from '@/assets/svgTecnologias/sql-server.svg'
 
 </script>
 <template>
@@ -63,9 +64,10 @@ import css from '@/assets/svgTecnologias/css.svg'
             <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/autenticacion-con-jwt-nodejs'"
                 :fotoProyecto="ftAutenticacion" :altProyecto="'Foto de la autenticacion con jwt'"
                 :titulo="'Autenticacion con jwt'"
-                :descripcion="`Implementacion de autenticacion con jwt en nodejs manejando tokens de forma segura.`"
-                :deploy="'https://auth-jwt-nodejs.onrender.com/home'">
+                :descripcion="`Implementacion de autenticacion con jwt en nodejs manejando tokens de forma segura.`">
 
+                <BadgeCardComponent :urlIcon="sqlserver" :title-badge="'SQL Server'"
+                    :alt-icon="'Icono de SQL Server'" />
                 <BadgeCardComponent :urlIcon="nodeIcon" :title-badge="'Node.js'" :alt-icon="'Icono de Node.js'" />
                 <BadgeCardComponent :urlIcon="expressIcon" :title-badge="'Express.js'"
                     :alt-icon="'Icono de Express.js'" />
