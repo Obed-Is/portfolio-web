@@ -20,7 +20,6 @@ import vueIcon from '@/assets/svgTecnologias/vue.svg';
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
-    // { name: 'PHP', icon: phpIcon, alt: 'PHP Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
     { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
     { name: 'MySQL', icon: mysqlIcon, alt: 'MySQL Logo' },
@@ -36,6 +35,9 @@ const frontendSkills = [
     { name: 'JavaScript', icon: jsIcon, alt: 'JavaScript Logo' },
     { name: 'Vue.js', icon: vueIcon, alt: 'Vue.js Logo' },
 ];
+
+// todas las tecnologias en una sola lista
+const skills = [...backendSkills, ...frontendSkills];
 
 const isVisible = ref(false);
 
@@ -61,35 +63,15 @@ onMounted(() => {
     <section id="habilidades" :class="{ 'animate-in': isVisible }">
         <h2>Habilidades</h2>
 
-        <!-- Backend — principal -->
-        <div class="skill-group backend-group">
+        <div class="skill-group unified-group">
             <div class="group-header">
-                <span class="group-badge">★</span>
-                <span class="group-label">Backend</span>
-                <span class="group-tag">Enfoque principal</span>
+                <span class="group-label">Tecnologías</span>
                 <span class="group-line"></span>
             </div>
-            <div class="skills-grid skills-grid--backend">
-                <div v-for="(tech, i) in backendSkills" :key="tech.name" class="skill-card skill-card--backend"
-                    :style="{ '--delay': i * 0.1 + 's' }">
-                    <div class="icon-wrapper">
-                        <img :src="tech.icon" :alt="tech.alt" class="skill-icon" />
-                    </div>
-                    <span class="skill-name">{{ tech.name }}</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Frontend — complementario -->
-        <div class="skill-group frontend-group">
-            <div class="group-header">
-                <span class="group-label group-label--secondary">Frontend</span>
-                <span class="group-tag group-tag--secondary">Complementario</span>
-                <span class="group-line group-line--secondary"></span>
-            </div>
-            <div class="skills-grid skills-grid--frontend">
-                <div v-for="(tech, i) in frontendSkills" :key="tech.name" class="skill-card skill-card--frontend"
-                    :style="{ '--delay': (i * 0.1 + 0.7) + 's' }">
+            <div class="skills-grid skills-grid--all">
+                <div v-for="(tech, i) in skills" :key="tech.name" class="skill-card skill-card--unified"
+                    :style="{ '--delay': i * 0.08 + 's' }">
                     <div class="icon-wrapper">
                         <img :src="tech.icon" :alt="tech.alt" class="skill-icon" />
                     </div>
@@ -123,43 +105,16 @@ h2 {
     gap: 22px;
 }
 
-.backend-group {
-    padding: 28px;
-    border-radius: var(--card-radius-border);
-    border: 1px solid rgba(76, 99, 232, 0.2);
-    background: linear-gradient(160deg, rgba(76, 99, 232, 0.06) 0%, transparent 60%);
-    position: relative;
-}
-
-.frontend-group {
-    padding: 0 4px;
-    opacity: 0.85;
-}
-
 .group-header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.group-badge {
-    font-size: 1em;
-    color: var(--color-secondary);
-    animation: pulse 2s ease-in-out infinite;
-}
-
 .group-label {
-    font-size: 1.25em;
+    font-size: 1.15em;
     font-weight: 700;
     color: var(--color-secondary);
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-}
-
-.group-label--secondary {
-    font-size: 1.05em;
-    font-weight: 600;
-    color: var(--color-third);
 }
 
 .group-tag {
@@ -174,32 +129,19 @@ h2 {
     white-space: nowrap;
 }
 
-.group-tag--secondary {
-    color: var(--color-third);
-    background: rgba(146, 161, 182, 0.1);
-}
-
 .group-line {
     flex: 1;
     height: 1px;
     background: linear-gradient(90deg, var(--color-secondary), transparent);
 }
 
-.group-line--secondary {
-    background: linear-gradient(90deg, rgba(146, 161, 182, 0.4), transparent);
-}
-
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 18px;
 }
 
-.skills-grid--backend {
-    justify-content: flex-start;
-}
-
-.skills-grid--frontend {
+.skills-grid--all {
     justify-content: flex-start;
 }
 
@@ -213,40 +155,26 @@ h2 {
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     cursor: default;
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(20px);
 }
 
 section.animate-in .skill-card {
-    animation: fadeSlideUp 0.5s ease forwards;
+    animation: fadeSlideUp 0.45s ease forwards;
     animation-delay: var(--delay);
 }
 
-.skill-card--backend {
-    width: 130px;
-    height: 130px;
-    padding: 22px;
-    background: linear-gradient(145deg, rgba(76, 99, 232, 0.1), rgba(76, 99, 232, 0.02));
-    border-color: rgba(76, 99, 232, 0.25);
+.skill-card--unified {
+    width: 120px;
+    height: 120px;
+    padding: 18px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-color: rgba(255,255,255,0.06);
 }
 
-.skill-card--backend:hover {
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 8px 28px rgba(76, 99, 232, 0.35);
+.skill-card--unified:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     border-color: var(--color-secondary);
-}
-
-.skill-card--frontend {
-    width: 95px;
-    height: 95px;
-    padding: 16px;
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.06);
-}
-
-.skill-card--frontend:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--box-shadow-secondary);
-    border-color: var(--color-third);
 }
 
 .icon-wrapper {
@@ -256,64 +184,28 @@ section.animate-in .skill-card {
     margin-bottom: 8px;
 }
 
-.skill-card--backend .skill-icon {
-    width: 50px;
-    height: 50px;
+.skill-icon {
+    width: 44px;
+    height: 44px;
     object-fit: contain;
-    filter: drop-shadow(0 0 6px rgba(76, 99, 232, 0.35));
-    transition: filter 0.3s ease;
-}
-
-.skill-card--backend:hover .skill-icon {
-    filter: drop-shadow(0 0 12px rgba(76, 99, 232, 0.6));
-}
-
-.skill-card--frontend .skill-icon {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-    opacity: 0.8;
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.skill-card--frontend:hover .skill-icon {
-    opacity: 1;
-    filter: drop-shadow(0 0 6px rgba(146, 161, 182, 0.4));
+.skill-card--unified:hover .skill-icon {
+    filter: drop-shadow(0 0 10px rgba(76, 99, 232, 0.25));
 }
 
 .skill-name {
     color: var(--color-primary);
     font-size: 0.85em;
-    font-weight: 500;
-    text-align: center;
-}
-
-.skill-card--backend .skill-name {
-    font-size: 0.9em;
     font-weight: 600;
-}
-
-.skill-card--frontend .skill-name {
-    font-size: 0.75em;
-    color: var(--color-third);
+    text-align: center;
 }
 
 @keyframes fadeSlideUp {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.5;
     }
 }
 
@@ -324,39 +216,24 @@ section.animate-in .skill-card {
         gap: 30px;
     }
 
-    .backend-group {
-        padding: 18px;
-    }
-
     .skills-grid {
         gap: 12px;
         justify-content: center;
     }
 
-    .skill-card--backend {
-        width: 105px;
-        height: 105px;
-        padding: 16px;
-    }
-
-    .skill-card--backend .skill-icon {
-        width: 42px;
-        height: 42px;
-    }
-
-    .skill-card--frontend {
-        width: 82px;
-        height: 82px;
+    .skill-card--unified {
+        width: 92px;
+        height: 92px;
         padding: 12px;
     }
 
-    .skill-card--frontend .skill-icon {
-        width: 30px;
-        height: 30px;
+    .skill-icon {
+        width: 32px;
+        height: 32px;
     }
 
     .skill-name {
-        font-size: 0.7em;
+        font-size: 0.72em;
     }
 
     .group-tag {
