@@ -20,11 +20,11 @@ onMounted(() => {
             <h1 class="anim-item" style="--i: 1">
                 Desarrollador
                 <span class="letter-tag">
-                    &lt; Full Stack Jr /&gt;
+                    &lt; Backend Jr /&gt;
                 </span>
             </h1>
             <p class="txt-info anim-item" style="--i: 2">
-                Desarrollo APIs y aplicaciones web con Node.js y Express. Me enfoco en construir servicios backend
+                Desarrollo de software con ASP.NET C# y Node.js con Express. Me enfoco en construir servicios backend
                 seguros, escalables y bien estructurados, trabajando con bases de datos SQL y autenticación con JWT.
             </p>
             <div class="btn-group anim-item" style="--i: 3">
