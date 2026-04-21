@@ -11,6 +11,8 @@ import gitIcon from '@/assets/svgTecnologias/git.svg';
 import dockerIcon from '@/assets/svgTecnologias/docker.svg';
 import phpIcon from '@/assets/svgTecnologias/php.svg';
 import sqlServerIcon from '@/assets/svgTecnologias/sql-server.svg';
+import csharpIcon from '@/assets/svgTecnologias/csharp.svg';
+import dotnetIcon from '@/assets/svgTecnologias/dotnet.svg';
 
 import htmlIcon from '@/assets/svgTecnologias/html5.svg';
 import cssIcon from '@/assets/svgTecnologias/css.svg';
@@ -19,6 +21,8 @@ import vueIcon from '@/assets/svgTecnologias/vue.svg';
 
 const backendSkills = [
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
+    { name: 'CSharp', icon: csharpIcon, alt: 'CSharop.js Logo' },
+    { name: 'Dotnet', icon: dotnetIcon, alt: 'Dotnet.js Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
     { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
