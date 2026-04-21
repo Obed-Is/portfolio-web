@@ -5,6 +5,7 @@ import ftInventario from '@/assets/sistema-inventario.webp';
 import ftPasarela from '@/assets/pasarela-stripe.webp';
 import ftPortafolio from '@/assets/portafolio-web.webp';
 import ftAutenticacion from '@/assets/auth-node.webp';
+import ftCuantovaleSv from '@/assets/cuantovalesv.webp';
 
 import BadgeCardComponent from './BadgeCardComponent.vue';
 import nodeIcon from '@/assets/svgTecnologias/nodejs.svg'
@@ -19,12 +20,27 @@ import postman from '@/assets/svgTecnologias/postman.svg'
 import html5 from '@/assets/svgTecnologias/html5.svg'
 import css from '@/assets/svgTecnologias/css.svg'
 import sqlserver from '@/assets/svgTecnologias/sql-server.svg'
+import csharpIcon from '@/assets/svgTecnologias/csharp.svg';
+import dotnetIcon from '@/assets/svgTecnologias/dotnet.svg';
+import apiRestIcon from '@/assets/svgTecnologias/apirest.svg';
 
 </script>
 <template>
     <section id="proyectos">
         <h2>Proyectos</h2>
         <div class="container-proyects">
+
+            <!-- Cuanto vale SV -->
+            <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/cuantovalesv-backend'"
+                :fotoProyecto="ftCuantovaleSv" :altProyecto="'Foto de la api de Cuanto vale Sv'"
+                :titulo="`Una API Rest diseñada para facilitar la búsqueda y comparación de precios de productos ofrecidos por empresas reconocidas en El Salvador, recopilando la informacion en tiempo real con el fin de ayudar a los usuarios a tomar la mejor desicion en su compra.`">
+
+                <BadgeCardComponent :urlIcon="csharpIcon" :title-badge="'CSharp'" :alt-icon="'Icono de CSharp'" />
+                <BadgeCardComponent :urlIcon="dotnetIcon" :title-badge="'ASP.NET'" :alt-icon="'Icono de ASP.NET'" />
+                <BadgeCardComponent :urlIcon="apiRestIcon" :title-badge="'API Rest'" :alt-icon="'Icono de API Rest'" />
+                <BadgeCardComponent :urlIcon="postman" :title-badge="'Postman'" :alt-icon="'Icono de Postman'" />
+                <BadgeCardComponent :urlIcon="gitHubIcon" :title-badge="'GitHub'" :alt-icon="'Icono de GitHub'" />
+            </CardProyectComponent>
 
             <!-- sistema de inventario y ventas -->
             <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/sistema-inventario'"
@@ -37,6 +53,7 @@ import sqlserver from '@/assets/svgTecnologias/sql-server.svg'
                 <BadgeCardComponent :urlIcon="expressIcon" :title-badge="'Express.js'"
                     :alt-icon="'Icono de Express.js'" />
                 <BadgeCardComponent :urlIcon="mysqlIcon" :title-badge="'MySql'" :alt-icon="'Icono de MySql'" />
+                <BadgeCardComponent :urlIcon="apiRestIcon" :title-badge="'API Rest'" :alt-icon="'Icono de API Rest'" />
                 <BadgeCardComponent :urlIcon="vueIcon" :title-badge="'Vue.js'" :alt-icon="'Icono de Vue.js'" />
                 <BadgeCardComponent :urlIcon="jsIcon" :title-badge="'Javascript'" :alt-icon="'Icono de Javascript'" />
                 <BadgeCardComponent :urlIcon="postman" :title-badge="'Postman'" :alt-icon="'Icono de Postman'" />
