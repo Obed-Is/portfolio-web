@@ -36,7 +36,7 @@ onMounted(() => {
                     </svg>
                     Contacto
                 </a>
-                <a href="/CV_Obed_Aquino_Desarrollador_Full_Stack_Junior.pdf" download="CV_Obed_Aquino.pdf"
+                <a href="/Obed_Aquino_Desarrollador_Backend_Junior.pdf" download="Obed_Aquino_Desarrollador_Backend_Junior.pdf"
                     class="btn btn-secondary">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
