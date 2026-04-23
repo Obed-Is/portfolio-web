@@ -34,7 +34,7 @@ import apiRestIcon from '@/assets/svgTecnologias/apirest.svg';
             <CardProyectComponent :urlGitHub="'https://github.com/Obed-Is/cuantovalesv-backend'"
                 :fotoProyecto="ftCuantovaleSv" :altProyecto="'Foto de la api de Cuanto vale Sv'"
                 :titulo="`Cuanto vale SV`"
-                :descripcion="`Una API Rest diseñada para facilitar la búsqueda y comparación de precios de productos ofrecidos por empresas reconocidas en El Salvador, recopilando la informacion en tiempo real con el fin de ayudar a los usuarios a tomar la mejor desicion en su compra.`">
+                :descripcion="`Una API Rest diseñada para facilitar la búsqueda y comparación de precios de productos ofrecidos por empresas reconocidas en El Salvador, recopilando la informacion en tiempo real con el fin de ayudar a los usuarios a tomar la mejor decisión en su compra.`">
 
                 <BadgeCardComponent :urlIcon="csharpIcon" :title-badge="'CSharp'" :alt-icon="'Icono de CSharp'" />
                 <BadgeCardComponent :urlIcon="dotnetIcon" :title-badge="'ASP.NET'" :alt-icon="'Icono de ASP.NET'" />
