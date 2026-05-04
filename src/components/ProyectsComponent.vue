@@ -120,9 +120,23 @@ section {
 
 h2 {
     align-self: flex-start;
-    font-size: 1.9em;
-    margin-bottom: 25px;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
     color: var(--color-primary);
+    position: relative;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-secondary);
+    border-radius: 2px;
 }
 
 .txt-git {
@@ -132,8 +146,9 @@ h2 {
 }
 
 .container-proyects {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 25px;
+    width: 100%;
 }
 </style>

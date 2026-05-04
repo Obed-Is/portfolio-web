@@ -25,12 +25,20 @@ defineProps({
 .badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    border-radius: var(--card-radius-border);
-    background: rgba(17, 82, 212, 0.05);
-    border: 1px solid rgba(17, 82, 212, 0.06);
-    font-size: 0.9rem;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-third);
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(76, 99, 232, 0.1);
+    border-color: rgba(76, 99, 232, 0.3);
     color: var(--color-primary);
 }
 
