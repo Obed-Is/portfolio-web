@@ -19,10 +19,14 @@ import cssIcon from '@/assets/svgTecnologias/css.svg';
 import jsIcon from '@/assets/svgTecnologias/javascript.svg';
 import vueIcon from '@/assets/svgTecnologias/vue.svg';
 
-const backendSkills = [
+const skills = [
+    { name: 'HTML5', icon: htmlIcon, alt: 'HTML5 Logo' },
+    { name: 'CSS3', icon: cssIcon, alt: 'CSS3 Logo' },
+    { name: 'JavaScript', icon: jsIcon, alt: 'JavaScript Logo' },
+    { name: 'Vue.js', icon: vueIcon, alt: 'Vue.js Logo' },
     { name: 'Node.js', icon: nodeIcon, alt: 'Node.js Logo' },
-    { name: 'CSharp', icon: csharpIcon, alt: 'CSharop.js Logo' },
-    { name: 'Dotnet', icon: dotnetIcon, alt: 'Dotnet.js Logo' },
+    { name: 'CSharp', icon: csharpIcon, alt: 'CSharp Logo' },
+    { name: 'Dotnet', icon: dotnetIcon, alt: 'Dotnet Logo' },
     { name: 'Express.js', icon: expressIcon, alt: 'Express.js Logo' },
     { name: 'API REST', icon: apiRestIcon, alt: 'API REST Logo' },
     { name: 'JWT', icon: jwtIcon, alt: 'JWT Logo' },
@@ -32,16 +36,6 @@ const backendSkills = [
     { name: 'Git', icon: gitIcon, alt: 'Git Logo' },
     { name: 'Docker', icon: dockerIcon, alt: 'Docker Logo' },
 ];
-
-const frontendSkills = [
-    { name: 'HTML5', icon: htmlIcon, alt: 'HTML5 Logo' },
-    { name: 'CSS3', icon: cssIcon, alt: 'CSS3 Logo' },
-    { name: 'JavaScript', icon: jsIcon, alt: 'JavaScript Logo' },
-    { name: 'Vue.js', icon: vueIcon, alt: 'Vue.js Logo' },
-];
-
-// todas las tecnologias en una sola lista
-const skills = [...backendSkills, ...frontendSkills];
 
 const isVisible = ref(false);
 
@@ -55,7 +49,7 @@ onMounted(() => {
                 }
             });
         },
-        { threshold: 0.15 }
+        { threshold: 0.1 }
     );
 
     const section = document.getElementById('habilidades');
@@ -65,22 +59,18 @@ onMounted(() => {
 
 <template>
     <section id="habilidades" :class="{ 'animate-in': isVisible }">
-        <h2>Habilidades</h2>
+        <div class="header-container">
+            <h2 class="section-title">Habilidades</h2>
+            <p class="section-subtitle">Tecnologías y herramientas que utilizo para dar vida a mis proyectos.</p>
+        </div>
 
-        <div class="skill-group unified-group">
-            <div class="group-header">
-                <span class="group-label">Tecnologías</span>
-                <span class="group-line"></span>
-            </div>
-
-            <div class="skills-grid skills-grid--all">
-                <div v-for="(tech, i) in skills" :key="tech.name" class="skill-card skill-card--unified"
-                    :style="{ '--delay': i * 0.08 + 's' }">
-                    <div class="icon-wrapper">
-                        <img :src="tech.icon" :alt="tech.alt" class="skill-icon" />
-                    </div>
-                    <span class="skill-name">{{ tech.name }}</span>
+        <div class="skills-grid">
+            <div v-for="(tech, i) in skills" :key="tech.name" class="skill-card" :style="{ '--delay': i * 0.05 + 's' }">
+                <div class="card-glass"></div>
+                <div class="icon-container">
+                    <img :src="tech.icon" :alt="tech.alt" class="skill-icon" />
                 </div>
+                <span class="skill-name">{{ tech.name }}</span>
             </div>
         </div>
     </section>
@@ -90,123 +80,120 @@ onMounted(() => {
 section {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    margin: 60px 0;
-    gap: 45px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    gap: 60px;
 }
 
-h2 {
-    align-self: flex-start;
-    font-size: 1.9em;
-    margin-bottom: 0;
+.header-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
     color: var(--color-primary);
-    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
 }
 
-.skill-group {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.group-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.group-label {
-    font-size: 1.15em;
-    font-weight: 700;
-    color: var(--color-secondary);
-}
-
-.group-tag {
-    font-size: 0.7em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--color-secondary);
-    background: rgba(76, 99, 232, 0.12);
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-}
-
-.group-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--color-secondary), transparent);
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-third);
+    max-width: 600px;
+    line-height: 1.6;
 }
 
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.skills-grid--all {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
 }
 
 .skill-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--card-color-border);
-    border-radius: var(--card-radius-border);
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    cursor: default;
+    padding: 24px;
+    height: 140px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
 }
 
 section.animate-in .skill-card {
-    animation: fadeSlideUp 0.45s ease forwards;
+    animation: reveal 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
     animation-delay: var(--delay);
 }
 
-.skill-card--unified {
-    width: 120px;
-    height: 120px;
-    padding: 18px;
-    background: linear-gradient(145deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border-color: rgba(255,255,255,0.06);
+.card-glass {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    z-index: 0;
+    transition: all 0.3s ease;
 }
 
-.skill-card--unified:hover {
-    transform: translateY(-6px) scale(1.04);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    border-color: var(--color-secondary);
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.05);
 }
 
-.icon-wrapper {
+.skill-card:hover .card-glass {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(76, 99, 232, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(76, 99, 232, 0.1);
+}
+
+.icon-container {
+    position: relative;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .icon-container {
+    transform: scale(1.1);
 }
 
 .skill-icon {
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    transition: filter 0.3s ease, opacity 0.3s ease;
-}
-
-.skill-card--unified:hover .skill-icon {
-    filter: drop-shadow(0 0 10px rgba(76, 99, 232, 0.25));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .skill-name {
-    color: var(--color-primary);
-    font-size: 0.85em;
+    position: relative;
+    z-index: 1;
+    font-size: 0.9rem;
     font-weight: 600;
-    text-align: center;
+    color: var(--color-primary);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-@keyframes fadeSlideUp {
+.skill-card:hover .skill-name {
+    opacity: 1;
+}
+
+@keyframes reveal {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -215,34 +202,31 @@ section.animate-in .skill-card {
 
 @media (max-width: 768px) {
     section {
-        width: 90%;
-        margin: 40px 0;
-        gap: 30px;
+        margin: 60px auto;
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 
     .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
         gap: 12px;
-        justify-content: center;
     }
 
-    .skill-card--unified {
-        width: 92px;
-        height: 92px;
-        padding: 12px;
+    .skill-card {
+        height: 110px;
+        padding: 16px;
     }
 
-    .skill-icon {
-        width: 32px;
-        height: 32px;
+    .icon-container {
+        width: 36px;
+        height: 36px;
     }
 
     .skill-name {
-        font-size: 0.72em;
-    }
-
-    .group-tag {
-        font-size: 0.6em;
-        padding: 2px 7px;
+        font-size: 0.8rem;
     }
 }
 </style>
