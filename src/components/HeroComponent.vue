@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import fotoPerfil from '@/assets/foto-perfil.webp';
 
 const loaded = ref(false);
 
@@ -48,26 +47,19 @@ onMounted(() => {
                 </a>
             </div>
         </div>
-        <div class="perfil-section anim-item" style="--i: 1">
-            <div class="perfil-ring">
-                <img :src="fotoPerfil" alt="Foto de perfil" class="ft-perfil">
-            </div>
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Disponible para trabajar
-            </div>
-        </div>
+        <div class="hero-accent" aria-hidden="true"></div>
     </section>
 </template>
 
 <style scoped>
 .first-section {
-    width: 90%;
+    max-width: 1100px;
+    width: calc(100% - 80px);
     display: grid;
-    grid-template-columns: 1.8fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    margin-top: 80px;
+    margin: 80px auto;
     padding: 40px 52px;
     background: var(--background-gradient);
     border: 1px solid var(--card-color-border);
@@ -110,6 +102,9 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    max-width: 720px;
+    width: 100%;
+    padding: 8px 16px;
 }
 
 .txt-name {
@@ -128,9 +123,10 @@ onMounted(() => {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     line-height: 1.15;
     color: var(--color-primary);
+    margin: 0;
 }
 
 .letter-tag {
@@ -141,9 +137,9 @@ h1 {
 
 .txt-info {
     color: var(--color-third);
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.6;
-    max-width: 520px;
+    max-width: 700px;
 }
 
 .btn-group {
@@ -157,7 +153,7 @@ h1 {
     align-items: center;
     gap: 8px;
     line-height: 1;
-    padding: 12px 22px;
+    padding: 12px 24px;
     font-size: 0.95em;
     font-weight: 600;
     cursor: pointer;
@@ -165,6 +161,7 @@ h1 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: var(--color-primary);
+    min-width: 150px;
 }
 
 .btn-primary {
@@ -191,10 +188,7 @@ h1 {
 }
 
 .perfil-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    display: none;
 }
 
 .perfil-ring {
@@ -270,6 +264,19 @@ h1 {
     .ft-perfil {
         max-width: 240px;
     }
+}
+
+.hero-accent {
+    position: absolute;
+    right: -6%;
+    top: 8%;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle at 30% 30%, rgba(76,99,232,0.12) 0%, rgba(110,231,183,0.06) 30%, transparent 60%);
+    filter: blur(18px);
+    pointer-events: none;
+    opacity: 0.9;
+    border-radius: 50%;
 }
 
 @media (max-width: 820px) {
